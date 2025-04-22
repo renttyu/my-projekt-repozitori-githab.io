@@ -15,6 +15,18 @@
       z-index: 1;
     }
 
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.05) 0%, transparent 80%);
+  z-index: 0;
+}
+
     header {
       background-color: #222;
       color: white;
@@ -74,13 +86,16 @@
       color: #111;
       border-radius: 8px;
       font-weight: bold;
-      transition: background-color 0.3s, color 0.3s;
+      transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
       text-decoration: none;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
     .contact-buttons a:hover {
       background-color: #000;
       color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
     }
 
     .video-wrapper {
@@ -164,6 +179,12 @@
         header.classList.remove('hide');
       }
       lastScroll = currentScroll;
+    });
+
+    // Эффект подсветки под курсором
+    document.addEventListener('mousemove', (e) => {
+      document.body.style.setProperty('--x', `${e.clientX}px`);
+      document.body.style.setProperty('--y', `${e.clientY}px`);
     });
   </script>
 

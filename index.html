@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Видео без границ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #0a0a0a; /* Черный фон для всего сайта */
+      color: #eee;
+      scroll-behavior: smooth;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: top 0.5s;
+    }
+
+    header.hide {
+      top: -200px;
+    }
+
+    header h1 {
+      margin: 0 0 1rem;
+      font-size: 2rem;
+    }
+
+    .section {
+      background-color: #121212;
+      margin: 4.84rem auto;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 60%;
+      max-width: 1658px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease; /* Уменьшена скорость появления */
+      font-size: 1.2rem;
+      border: 2px solid #fff; /* Белая обводка карточек */
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #fffc;
+      font-size: 1.8rem;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .contact-buttons a {
+      padding: 0.6rem 1.4rem;
+      background-color: #fff;
+      color: #111;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+      text-decoration: none;
+    }
+
+    .contact-buttons a:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .video-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .video-wrapper iframe {
+      border-radius: 15px;
+      box-shadow: 0 0 20px #0ff;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="main-header">
+    <h1>Открытая книга обо мне</h1>
+    <div class="contact-buttons">
+      <a href="https://t.me/Bossnabaze" target="_blank">СВЯЗЬ</a>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <h2>Обо мне</h2>
+    <p>Привет! Меня зовут Ренат, я видеомонтажёр и моушн-дизайнер с акцентом на работу в 3D-пространстве, саунд-дизайн и цепляющую моушен-графику.</p>
+  </section>
+
+  <section id="why-style" class="section">
+    <h2>Почему такой монтаж затягивает зрителя?</h2>
+    <p>Обо мне</p>
+    <p>Привет! Меня зовут Ренат, я видеомонтажёр и моушн-дизайнер с акцентом на работу в 3D-пространстве, саунд-дизайн и цепляющую моушен-графику.</p>
+    <p>Почему именно такой стиль? Потому что он работает!</p>
+    <p>🎯 3D-пространство добавляет глубину и визуальный интерес, которого невозможно достичь в 2D-пространстве. Такой подход буквально «втягивает» зрителя в видео и погружает зрителя в происходящее на экране. Это особенно ценно в коротких вертикальных видео, где нужно зацепить внимание за секунды.</p>
+    <p>🎧 Саунд-дизайн усиливает восприятие: правильно подобранный звук подчёркивает движение, создаёт настроение и помогает удерживать внимание. Это как экшн-сцены в фильме, только переданные через звук: драйв, энергия, эмоции.</p>
+    <p>🌀 Моушн-графика — это язык, которым говорит современный видеоконтент. Она помогает визуализировать идеи, добавлять «вау»-эффект и делать даже сложную информацию легкоусвояемой.</p>
+    <p>Такой стиль работает на результат: повышает вовлечённость, улучшает удержание и делает ролики не просто красивыми, а по-настоящему запоминающимися. Если вы хотите, чтобы ваши видео не просто смотрели, а пересматривали — значит, мы на одной волне!</p>
+  </section>
+
+  <section id="portfolio" class="section">
+    <h2 style="text-align: center;">Портфолио (2 видео)</h2>
+    <div class="video-wrapper">
+      <h3>1.Динамичный Reals с 3D и моушен графики</h3>
+      <iframe width="360" height="640" src="https://drive.google.com/file/d/1WRQGpsu4DfOdz8ElfDN1m1GamwzgDVWn/preview" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-wrapper" style="margin-top: 5%;"> <!-- Добавлен отступ -->
+      <h3>2.Динамичное горизонтальное видео с использованием 3D и моушен графики</h3>
+      <iframe width="640" height="360" src="https://drive.google.com/file/d/1uL-vAsFquBp0Rhug9j6laULIqXEnPGbd/preview" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="contact-buttons">
+      <a href="https://t.me/Bossnabaze" target="_blank">СВЯЗЬ</a>
+    </div>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+
+    let lastScroll = 0;
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > lastScroll) {
+        header.classList.add('hide');
+      } else {
+        header.classList.remove('hide');
+      }
+      lastScroll = currentScroll;
+    });
+  </script>
+
+</body>
+</html>

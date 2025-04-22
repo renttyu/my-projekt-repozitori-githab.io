@@ -183,6 +183,21 @@ body::before {
       document.body.style.setProperty('--x', `${e.clientX}px`);
       document.body.style.setProperty('--y', `${e.clientY}px`);
     });
+// Отключение свечения курсора, если активировано расширение тёмной темы
+window.addEventListener('load', () => {
+  const bgColor = getComputedStyle(document.body).backgroundColor;
+
+  // Пример: если цвет очень тёмный — RGB около 0
+  const isDarkForced = /^rgb\(0,\s*0,\s*0\)$/.test(bgColor);
+
+  if (isDarkForced) {
+    const style = document.createElement('style');
+    style.textContent = `body::before { display: none !important; }`;
+    document.head.appendChild(style);
+    console.log('🔥 Обнаружено расширение тёмной темы. Свечение курсора отключено.');
+  }
+});
+
   </script>
 
 </body>
